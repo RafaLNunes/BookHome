@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block 'body' %}
+<div class="bar_topo">
+  <h1 class="titulo">Biblioteca</h1>
+<div class="type_user">
+      <button class="Li_bnt" type="submit" id="Li_bnt" onclick="login_sist()">Log In</button>
+      <button class="Su_bnt" type="submit" id="Su_bnt" onclick="signup_sist()">Sign Up</button>
+</div>
+</div>
+    <div class="area">
+      <Form action="{% url "cadastro" %}" method="POST" class="forms_SignUp" id="forms_SignUp">
+        {% csrf_token %}
+        <img src="{% static 'img/Logo_Branca-Bkout.png' %}" alt="Logo_Branca-Bkout">
+        <h1 class="type_h1" id="type_h1">Sign Up</h1>
+        <p clas="detalhe" id="detalhe">Favor não usar informações reais para criação de conta</p>
+        <div class="caixao">
+          <h1>UserName</h1>
+          <input type="text" name="user_name" required placeholder="seu Nome de User" />
+        </div>
+        <div class="caixao">
+          <h1>PassWord</h1>
+          <input type="password" name="pass_word" required placeholder="sua Senha Individual" />
+        </div>
+        {% comment %} <div class="aviso">Senha ou User já existente, mude algo ou faça Log In</div>
+        <div class="aviso">Senha ou User invalidos, corrija as iformações</div> {% endcomment %}
+
+        <button type="submit" class="continue" id="continue">Sign Up</button>
+      </Form>
+    </div>
+
+{% endblock 'body' %}

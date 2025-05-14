@@ -1,0 +1,17 @@
+{% load static %} {% comment %} Essa linha terá melhores explicações no README {% endcomment %}
+
+
+<!DOCTYPE html>
+<html lang="Pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookHome</title>
+     <link rel="stylesheet" type="text/css" href="{% static 'css//base.css' %}" /> {% comment %} Essa linha terá melhores explicações no README {% endcomment %}
+  </head>
+  <body>
+      {% block 'body' %} {% endblock 'body' %} 
+      {% comment %}Essa linha terá melhores explicações no README{% endcomment %}
+  </body>
+  <script src="{%static 'js//cad_script.js'%}"></script> {% comment %}Essa linha terá melhores explicações no README {% endcomment %}
+</html>
